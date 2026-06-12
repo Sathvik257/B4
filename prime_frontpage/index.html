@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Video</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar__main">
+            <a class="brand-mark" href="#" aria-label="Prime Video home">
+                <img src="https://m.media-amazon.com/images/G/01/digital/video/web/logo-min-remaster.png" alt="Prime Video Logo">
+            </a>
+
+            <nav class="menu" aria-label="Primary navigation">
+                <a class="menu__item menu__item--current" href="#">Home</a>
+                <a class="menu__item" href="#">Movies</a>
+                <a class="menu__item" href="#">TV shows</a>
+                <a class="menu__item" href="#">Live TV</a>
+                <a class="menu__item" href="#">Subscriptions</a>
+            </nav>
+        </div>
+
+        <div class="topbar__actions">
+            <button class="plain-icon" type="button" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+
+            <button class="language-switch" type="button" aria-label="Choose language">
+                <span>EN</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <button class="plain-icon" type="button" aria-label="Apps menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            </button>
+
+            <a class="avatar" href="#" aria-label="Profile">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Profile">
+            </a>
+
+            <a class="action action--blue" href="#">Join Prime</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="promo promo--first">
+            <div class="promo__copy">
+                <article class="copy-block">
+                    <h1>Welcome to Prime Video</h1>
+                    <p>Join Prime to watch the latest movies, TV shows and award-winning Amazon Originals</p>
+                    <a class="action action--light action--wide" href="#">Sign in to join Prime</a>
+                </article>
+            </div>
+
+            <aside class="promo__visual" aria-hidden="true">
+                <span class="fade-cover"></span>
+                <span class="poster poster--welcome"></span>
+            </aside>
+        </section>
+
+        <section class="promo promo--rental">
+            <div class="promo__copy">
+                <article class="copy-block">
+                    <h2>Movie rentals on Prime Video</h2>
+                    <p>Early Access to new movies, before digital subscription</p>
+                    <a class="action action--light action--wide" href="#">Rent now</a>
+                </article>
+            </div>
+
+            <aside class="promo__visual" aria-hidden="true">
+                <span class="fade-cover"></span>
+                <span class="poster poster--rentals"></span>
+            </aside>
+        </section>
+
+        <section class="channels">
+            <div class="channels__inner">
+                <article class="copy-block">
+                    <h2>Your favorite subscriptions all in one place</h2>
+                    <p>Customers can subscribe to get access to a variety of premium and specialty content, easily accessible within the Prime Video app</p>
+                </article>
+
+                <div class="channel-board" aria-label="Subscription channels">
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_AppleTV._AC_SX400_QL80_FP_.jpg" alt="Apple TV"></a>
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Moviesphere._AC_SX400_QL80_FP_.jpg" alt="Movie Sphere"></a>
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Lionsgateplay._AC_SX400_QL80_FP_.jpg" alt="Lionsgate Play"></a>
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Goldminesplay._AC_SX400_QL80_FP_.jpg" alt="Goldmines Play"></a>
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Animetimes._AC_SX400_QL80_FP_.jpg" alt="Anime Times"></a>
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Manoramamax._AC_SX400_QL80_FP_.jpg" alt="Manorama Max"></a>
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_Chaupal._AC_SX400_QL80_FP_.jpg" alt="Chaupal"></a>
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_BBCPlayer._AC_SX400_QL80_FP_.jpg" alt="BBC Player"></a>
+                    <a class="channel-card" href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/2026/426x294_NBA._AC_SX400_QL80_FP_.jpg" alt="NBA League Pass"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="footer-brand" href="#">
+            <img src="https://m.media-amazon.com/images/G/01/digital/video/web/logo-min-remaster.png" alt="Prime Video Logo">
+        </a>
+
+        <nav class="footer-menu" aria-label="Footer navigation">
+            <a href="#">Terms and Privacy Notice</a>
+            <a href="#">Send us feedback</a>
+            <a href="#">Help</a>
+        </nav>
+
+        <p class="legal-text">© 1996-2026, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+</body>
+</html>
