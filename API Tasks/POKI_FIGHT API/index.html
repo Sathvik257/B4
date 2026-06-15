@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battle Cards</title>
+
+    <style>
+        body{
+            text-align:center;
+            font-family:Arial,sans-serif;
+        }
+
+        .container{
+            display:flex;
+            justify-content:center;
+            gap:50px;
+            margin-top:30px;
+        }
+
+        .card{
+            border:1px solid black;
+            padding:20px;
+            width:250px;
+        }
+
+        img{
+            width:150px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="pokidata()">
+        Get 2 Random Pokemon
+    </button>
+
+    <div class="container">
+
+        <div class="card">
+            <img id="img1">
+            <h2 id="name1"></h2>
+            <p id="attack1"></p>
+            <p id="type1"></p>
+        </div>
+
+        <div class="card">
+            <img id="img2">
+            <h2 id="name2"></h2>
+            <p id="attack2"></p>
+            <p id="type2"></p>
+        </div>
+
+    </div>
+
+    <script>
+
+        async function pokidata(){
+
+            try{
+
+                const id1 = Math.floor(Math.random()*1025)+1;
+                const id2 = Math.floor(Math.random()*1025)+1;
+
+                const [response1,response2] = await Promise.all([
+                    fetch(`https://pokeapi.co/api/v2/pokemon/${id1}`),
+                    fetch(`https://pokeapi.co/api/v2/pokemon/${id2}`)
+                ]);
+
+                const data1 = await response1.json();
+                const data2 = await response2.json();
+
+                document.getElementById("img1").src =
+                    data1.sprites.front_default;
+
+                document.getElementById("img2").src =
+                    data2.sprites.front_default;
+
+                document.getElementById("name1").textContent =
+                    data1.name.toUpperCase();
+
+                document.getElementById("name2").textContent =
+                    data2.name.toUpperCase();
+
+                document.getElementById("attack1").textContent =
+                    "Attack: " + data1.stats[1].base_stat;
+
+                document.getElementById("attack2").textContent =
+                    "Attack: " + data2.stats[1].base_stat;
+
+                document.getElementById("type1").textContent =
+                    "Type: " +
+                    data1.types.map(t => t.type.name).join(", ");
+
+                document.getElementById("type2").textContent =
+                    "Type: " +
+                    data2.types.map(t => t.type.name).join(", ");
+
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

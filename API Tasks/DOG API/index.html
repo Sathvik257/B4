@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dog API</title>
+</head>
+<body>
+
+<select id="breed"></select>
+
+<button onclick="dogdata()">Get Dog</button><br><br>
+
+
+
+<img id="dogimg">
+
+<h3 id="dognameDisplay"></h3>
+
+<script>
+
+async function loadBreeds() {
+
+const response =
+await fetch("https://dog.ceo/api/breeds/list/all");
+
+const data = await response.json();
+
+const breedSelect = document.getElementById("breed");
+
+for (let breed in data.message) {
+
+const option = document.createElement("option");
+
+option.value = breed;
+option.textContent = breed;
+
+breedSelect.appendChild(option);
+}
+}
+
+async function dogdata() {
+
+const breed = document.getElementById("breed").value;
+
+const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
+
+const data =await response.json();
+
+document.getElementById("dogimg").src =data.message;
+
+document.getElementById("dognameDisplay").textContent = breed;
+}
+
+loadBreeds();
+
+</script>
+
+</body>
+</html>
